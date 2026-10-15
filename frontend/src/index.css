@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/inter";
+
+@theme inline {
+  --font-sans: "Inter Variable", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  --color-background: #eae8e3;
+  --color-foreground: #111111;
+  --color-primary: #e61919;
+  --color-primary-foreground: #ffffff;
+  --color-popover: #f4f4f0;
+  --color-popover-foreground: #111111;
+  --color-accent: #e61919;
+  --color-accent-foreground: #ffffff;
+  --color-border: #171714;
+  --color-input: #171714;
+  --color-ring: #e61919;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #e61919;
+  outline-offset: 3px;
+}
+
+::selection {
+  color: #fff;
+  background: #e61919;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
